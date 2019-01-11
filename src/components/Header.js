@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 /**
 If a react component only has the render function it is more concise to
@@ -59,5 +61,12 @@ class Header extends React.Component {
     };
 };
 **/
+
+
+//with PropTypes module you can specify what paramaters are required
+//and even their types
+Header.propTypes = {
+    tagline: PropTypes.string.isRequired
+};
 
 export default Header;

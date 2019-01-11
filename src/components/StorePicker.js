@@ -1,6 +1,7 @@
 //must always improt react for each react components 
 //webpack will dedupe so it is only included once in final build
 import React from 'react';
+import PropTypes from 'prop-types';
 import {getFunName} from '../helpers';
 
 /**
@@ -10,6 +11,10 @@ To create a component syntax is:
 **/
 class StorePicker extends React.Component { 
     myInput = React.createRef();
+
+    static propTypes = {
+        history: PropTypes.object
+    };
 
     /**
     If a method needs to reference 'this' key word
